@@ -1,6 +1,7 @@
 
-.test-el{
-  color: green; 
-  font-size: 30px;
+.max-width-wrapper {
+  // border: solid blue;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-
