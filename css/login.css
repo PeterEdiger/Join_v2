@@ -1,5 +1,9 @@
 /************************* Login Signup *************************/
 /************************* Button Styling *************************/
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -26,11 +30,10 @@ header {
 }
 
 .join-logo {
+  margin: 24px;
   width: 100.03px;
   height: 121.97px;
-  position: relative;
-  top: 50px;
-  left: 77px;
+  border: solid green;
 }
 
 .join-logo-animation {
@@ -273,11 +276,11 @@ h1 {
 /* Footer Sektion */
 footer {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   gap: 16px;
-  width: 98%;
-  bottom: 35px;
+  border: solid red;
 }
 
 footer a {
@@ -320,9 +323,6 @@ footer a:hover {
   .join-logo {
     width: 64px;
     height: 78px;
-    top: 24px;
-    left: 32px;
-    border: solid green;
   }
   h1 {
     font-size: 47px;

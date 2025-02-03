@@ -1,6 +1,10 @@
 @import 'mixins.scss';
 
 
+*{
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -23,11 +27,10 @@ header {
 }
 
 .join-logo {
+  margin: 24px;
   width: 100.03px;
   height: 121.97px;
-  position: relative;
-  top: 50px;
-  left: 77px;
+  border: solid green;
 }
 
 .join-logo-animation {
@@ -273,13 +276,8 @@ h1 {
 
 /* Footer Sektion */
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 16px;
-  width: 98%;
-  position: absolute;
-  bottom: 35px;
+  @include dflex($gap: 16px);
+  border: solid red;
 }
 
 footer a {
@@ -325,9 +323,7 @@ footer a:hover {
   .join-logo {
     width: 64px;
     height: 78px;
-    top: 24px;
-    left: 32px;
-    border: solid green;
+  
   }
 
   h1 {
