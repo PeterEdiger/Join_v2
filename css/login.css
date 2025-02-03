@@ -1,16 +1,27 @@
+/************************* Login Signup *************************/
+html,
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background-color: #f6f7f8;
+  height: 100%;
+  border: solid orange;
+  overflow-x: hidden;
+}
+
+body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  gap: 0px;
+  background-color: #f6f7f8;
 }
 
 header {
-  width: 100vw;
+  border: solid red;
+  width: 100%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .join-logo {
@@ -109,7 +120,7 @@ header {
 
 /* LogIn Section */
 .login-body {
-  margin-top: 120px;
+  margin: auto;
   display: flex;
   padding: 48px 115px;
   flex-direction: column;
@@ -129,8 +140,7 @@ header {
 }
 
 h1 {
-  margin-block-end: 0;
-  margin-block-start: 0;
+  margin: 0;
   font-size: 73px;
 }
 
@@ -259,15 +269,11 @@ h1 {
   box-shadow: 0 0 10px rgba(169, 169, 169, 0.6);
 }
 
-/* Footer Sektion */
+/* Footer Section */
 footer {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   gap: 16px;
-  width: 98%;
-  position: absolute;
-  bottom: 35px;
 }
 
 footer a {
@@ -377,5 +383,7 @@ footer a:hover {
 .d-none {
   display: none;
 }
+
+
 
 /*# sourceMappingURL=login.css.map */
