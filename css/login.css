@@ -1,4 +1,5 @@
 /************************* Login Signup *************************/
+/************************* Button Styling *************************/
 html,
 body {
   margin: 0;
@@ -269,11 +270,14 @@ h1 {
   box-shadow: 0 0 10px rgba(169, 169, 169, 0.6);
 }
 
-/* Footer Section */
+/* Footer Sektion */
 footer {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 16px;
+  width: 98%;
+  bottom: 35px;
 }
 
 footer a {
@@ -318,6 +322,7 @@ footer a:hover {
     height: 78px;
     top: 24px;
     left: 32px;
+    border: solid green;
   }
   h1 {
     font-size: 47px;
