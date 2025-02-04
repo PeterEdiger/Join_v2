@@ -1,7 +1,6 @@
 /************************* Login Signup *************************/
 /************************* Button Styling *************************/
 .max-width-wrapper {
-  border: solid blue;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;

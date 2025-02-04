@@ -10,8 +10,8 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   height: 100%;
-  border: solid orange;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 }
 
 header {
-  border: solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -32,8 +31,6 @@ header {
   height: 121.97px;
   border: solid green;
 }
-
-
 
 .sign-up {
   display: flex;
@@ -61,6 +58,13 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
+#checkbox-frame {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+
 
 .sign-up-mobile {
   display: none;
@@ -250,7 +254,6 @@ h1 {
   box-shadow: 0 0 10px rgba(169, 169, 169, 0.6);
 }
 
-/* Footer Sektion */
 footer {
   @include dflex($gap: 16px);
 }
@@ -269,7 +272,6 @@ footer a {
 
 footer a:hover {
   color: rgb(40, 171, 226);
-  font-size: 17px;
 }
 
 .footer-div {
@@ -372,6 +374,10 @@ footer a:hover {
 @media (max-width: 580px) {
   .login-body {
     width: 85%;
+  }
+
+  body{
+    overflow-y: auto;
   }
 }
 
