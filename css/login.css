@@ -23,7 +23,6 @@ body {
 }
 
 header {
-  border: solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -186,6 +185,14 @@ h1 {
   cursor: pointer;
 }
 
+#mail-img {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 19px;
+  cursor: pointer;
+}
+
 .log-in-btn {
   width: 110px;
   height: 48px;
@@ -280,7 +287,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  border: solid red;
 }
 
 footer a {

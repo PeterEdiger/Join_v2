@@ -1,0 +1,4 @@
+# relative path
+type in this command 
+
+sass --watch ./scss:./css

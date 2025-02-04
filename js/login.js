@@ -20,7 +20,6 @@ function login() {
 
 
 function checkMailPw(email, password) {
-
 }
 
 /**
@@ -73,9 +72,7 @@ function guestLoginIn() {
 
 
 /**
- * Diese Funktion funktioniert nicht richt warum?
- * Wie ist es jetzt? 
- *
+ * Toggles pwd visibilty when clicking the icon in the input field. 
  */
 function togglePasswordVisibility() {
   const passwordInput = document.getElementById("password");
@@ -91,7 +88,6 @@ function togglePasswordVisibility() {
     isVisible = false;
   }
 }
-
 
 
 /**
