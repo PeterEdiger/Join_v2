@@ -72,35 +72,25 @@ function guestLoginIn() {
 }
 
 
+/**
+ * Diese Funktion funktioniert nicht richt warum?
+ * Wie ist es jetzt? 
+ *
+ */
 function togglePasswordVisibility() {
   const passwordInput = document.getElementById("password");
-  const lockImg = document.getElementById("img-lock");
-
+  const imgPwd = document.querySelector(`.img-pwd`)
+  
   if (!isVisible) {
     passwordInput.type = "text";
-    lockImg.src = "/assets/img/log_in/visibility.png";
+    imgPwd.src = "/assets/img/log_in/visibility.png";
     isVisible = true;
   } else {
     passwordInput.type = "password";
+    imgPwd.src = "/assets/img/log_in/lock.png"; 
     isVisible = false;
   }
 }
-
-
-document.getElementById("password").addEventListener("input", function () {
-  const passwordInput = document.getElementById("password");
-  const lockImg = document.getElementById("img-lock");
-
-  if (passwordInput.value.length > 0) {
-    if (!isVisible) {
-      lockImg.src = "/assets/img/log_in/visibility_off.png";
-    } else {
-      lockImg.src = "/assets/img/log_in/visibility.png";
-    }
-  } else {
-    lockImg.src = "/assets/img/log_in/lock.png";
-  }
-});
 
 
 
