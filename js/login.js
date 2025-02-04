@@ -1,3 +1,12 @@
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+
 let checked = false;
 let isVisible = false;
 let userData;
@@ -89,6 +98,9 @@ function togglePasswordVisibility() {
   }
 }
 
+logSth = ()=>{
+  console.log("I am here");
+} 
 
 /**
  * Changes visibility of a checkmark png. 

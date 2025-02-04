@@ -1,48 +1,10 @@
-let signUpData = [];
-let pwInputVisible = false;
-let pwInput = document.getElementById('password');
-let pwInputRepeat = document.getElementById('password-repeat');
-let userCredentialsObject = {};
-
-
-/**
- * Executes after a successful sign-up / form validation. 
- * Gets the data from the input fields, puts the data in an JSON array.
- */
-async function getSignUpInputs() {
-  let name = document.getElementById(`name`);
-  let email = document.getElementById(`mail`);
-  let password = document.getElementById(`password`);
-  let passwordRepeat = document.getElementById(`password-repeat`);
-  handleRemoteStorage(name.value, email.value, password.value);
-  clearFields(name, email, password, passwordRepeat);
-  transitionHandler();
-  // removeLogInAnimation();
-}
-
-
-async function setSignUpData(remoteKey, JSONArray) {
-  await setItem(remoteKey, JSON.stringify(JSONArray));
-}
-
-
-/**
- * Gets existing data from remote. And adds new sign up data. 
- */
-async function handleRemoteStorage(name, email, password) {
-  signUpData = await getUserData("userNameEmailPassword");
-  let initials = getInitials(name);
-  signUpData.push(
-    {
-      "name": name,
-      "initials": initials, 
-      "email": email,
-      "password": password
-    }
-  )
-  console.log(signUpData);
-  await setSignUpData("userNameEmailPassword", signUpData);
-}
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 
 
 /**
@@ -63,52 +25,11 @@ function getInitials(nameString) {
 }
 
 
-/**
- * Gets user data from remote
- */
-async function getUserData(remoteKey) {
-  let remoteValue = JSON.parse(await getItem(remoteKey));
-  return remoteValue;
-}
-
-
 function clearFields(name, email, password, passwordRepeat) {
   name.value = "";
   email.value = "";
   password.value = "";
-  passwordRepeat.value = "";
 }
-
-
-/**  
- * Changes the password field icon from lock to invisible based on pwInput length. 
- * @param {string} pwId - password field element
- * @param {string} pwImgId - password field icon element
- */
-function pwIconChanger(pwId, pwImgId) {
-  const passwordInput = document.getElementById(pwId);
-  const passwordFieldIcon = document.getElementById(pwImgId);
-  if (passwordInput.value.length > 0) {
-    passwordFieldIcon.src = "/assets/img/log_in/visibility_off.png";
-  } else {
-    passwordFieldIcon.src = "/assets/img/log_in/lock.png";
-  }
-}
-
-
-/**
- * Input listeners for password field and password-repeat field. 
- * @param {string} "input" - Event type, listens for pwInput events.
- * @param {function} pwIconChanger - Function to be called on pwInput events. 
- */
-let passwordField = document.getElementById("password");
-let passwordRepeatField = document.getElementById(`password-repeat`);
-passwordField.addEventListener("input", () => {
-  pwIconChanger("password", "password-img");
-});
-passwordRepeatField.addEventListener("input", () => {
-  pwIconChanger("password-repeat", "password-repeat-img");
-});
 
 
 /**

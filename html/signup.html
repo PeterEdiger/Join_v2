@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
 
+  <script src="../firebase.js" type="module" defer></script>
   <script src="../js/signup.js" defer></script>
   <title>Join | Sign Up</title>
 </head>
@@ -63,13 +64,6 @@
             <input class="input-field " id="password" placeholder="Password" type="password" required>
             <img src="../assets/img/log_in/lock.png" id="password-img" class="input-field__img-placing" alt=""
               onclick="togglePasswordVisibility(`password`, `password-img`)">
-          </div>
-
-          <!-------------------------- Password Repeat -------------------------->
-          <div class="input-field-box">
-            <input class="input-field" id="password-repeat" placeholder="Confirm Password" type="password" required>
-            <img src="../assets/img/log_in/lock.png" id="password-repeat-img" class="input-field__img-placing" alt=""
-              onclick="togglePasswordVisibility(`password-repeat`, 'password-repeat-img')">
           </div>
 
           <!-------------------------- Checkbox -------------------------->
