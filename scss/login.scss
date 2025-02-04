@@ -20,7 +20,6 @@ body {
 }
 
 header {
-  border: solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -277,8 +276,8 @@ h1 {
 /* Footer Sektion */
 footer {
   @include dflex($gap: 16px);
-  border: solid red;
 }
+
 
 footer a {
   display: inline-block;
