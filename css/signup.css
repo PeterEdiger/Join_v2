@@ -1,17 +1,33 @@
 @charset "UTF-8";
+/************************* Login Signup *************************/
+/************************* Button Styling *************************/
 /************************* GLOBAL SELECTORS *************************/
 @font-face {
   font-family: "Inter";
   /* Gewünschter Name */
   src: url("../assets/fonts/inter-font.ttf");
 }
-body {
-  background-color: #F6F7F8;
-  margin: 0;
-}
-
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  height: 100%;
+  border: solid orange;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  background-color: #F6F7F8;
+  margin: 0;
 }
 
 a {
@@ -19,13 +35,10 @@ a {
   outline: none;
   stroke: none;
 }
-
 a:focus {
   outline: 0;
 }
-
-a:link,
-a:visited {
+a:link, a:visited {
   text-decoration: none;
 }
 
@@ -42,10 +55,16 @@ a:visited {
 
 /************************* HEADER *************************/
 #join-logo-sign-up {
-  margin-top: 80px;
-  margin-left: 77px;
   width: 100.03px;
   height: 121.97px;
+}
+
+header {
+  border: solid red;
+  padding: 24px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
 }
 
 /************************* SIGN-UP-FRAME *************************/
@@ -70,7 +89,7 @@ a:visited {
 #sign-up-frame {
   box-sizing: content-box;
   background-color: white;
-  margin: 0 auto;
+  margin: auto;
   width: 442px;
   display: flex;
   padding: 48px 88px;
@@ -208,13 +227,15 @@ input[type=checkbox] {
 
 /************************* FOOTER *************************/
 footer {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
   justify-content: center;
   align-items: flex-start;
   gap: 16px;
   width: 100%;
-  position: absolute;
-  bottom: 35px;
 }
 
 footer a {
@@ -231,8 +252,6 @@ footer a {
 /************************* RESPONSIVNESS *************************/
 @media (max-width: 1017px) {
   #join-logo-sign-up {
-    margin-top: 37px;
-    margin-left: 38px;
     width: 64px;
     height: 78px;
   }

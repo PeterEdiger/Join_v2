@@ -20,6 +20,7 @@ body {
 }
 
 header {
+  border: solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -32,40 +33,7 @@ header {
   border: solid green;
 }
 
-.join-logo-animation {
-  z-index: 2;
-  animation: logo-mid-to-upper-left 1s ease-in;
-  /* position: relative; */
-}
 
-@keyframes logo-mid-to-upper-left {
-  from {
-    transform: translate(100%, 100%);
-    width: 274px;
-    height: 334.07px;
-  }
-
-  to {
-    transform: translate(0%, 0%);
-    width: 100.03px;
-    height: 121.97px;
-  }
-}
-
-.fading-animation {
-  animation: fading-in 2s;
-  opacity: 1;
-}
-
-@keyframes fading-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 .sign-up {
   display: flex;
@@ -406,6 +374,42 @@ footer a:hover {
     width: 85%;
   }
 }
+
+/************************* Animations *************************/
+.join-logo-animation {
+  z-index: 2;
+  animation: logo-mid-to-upper-left 1s ease-in;
+}
+
+@keyframes logo-mid-to-upper-left {
+  from {
+    transform: translate(100%, 100%);
+    width: 274px;
+    height: 334.07px;
+  }
+
+  to {
+    transform: translate(0%, 0%);
+    width: 100.03px;
+    height: 121.97px;
+  }
+}
+
+.fading-animation {
+  animation: fading-in 2s;
+  opacity: 1;
+}
+
+@keyframes fading-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 /************************* DISPLAY CLASSES *************************/
 .d-none {

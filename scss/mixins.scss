@@ -1,5 +1,5 @@
 @mixin dflex($fD: row, $jC: space-between, $aI: center, $gap: 0px) {
-  display: flex; 
+  display: flex;
   flex-direction: $fD;
   justify-content: $jC;
   align-items: $aI;
@@ -10,20 +10,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 
-@mixin placeAbsoluteElement($top : null, $right: null, $bottom: null, $left: null){
+@mixin placeAbsoluteElement($top : null, $right: null, $bottom: null, $left: null) {
   position: absolute;
   top: $top;
   right: $right;
   bottom: $bottom;
-  left: $left;    
+  left: $left;
 }
 
 /************************* Login Signup *************************/
 
-@mixin loginSignupWindow($width, $padding){
+@mixin loginSignupWindow($width, $padding) {
   padding: $padding;
   box-sizing: border-box;
   @include centerAbsoluteElement();
@@ -37,7 +37,7 @@
 
 /************************* Button Styling *************************/
 
-@mixin removeBtnStyles(){
+@mixin removeBtnStyles() {
   background: none;
   border: none;
   padding: 0;
@@ -57,3 +57,19 @@
   font-size: $font-size;
   font-weight: $font-weight;
 }
+
+@mixin noStylingLinks () {
+  text-decoration: none;
+  outline: none;
+  stroke: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+}
+

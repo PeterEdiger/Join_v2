@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/signup.css">
-  <link rel="stylesheet" href="../css/tools.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
 
   <script src="../js/signup.js" defer></script>
@@ -13,61 +13,82 @@
 </head>
 
 <body>
-  <main class="max-width-wrapper"></main>
-  <img id="join-logo-sign-up" src="../assets/img/log_in/join_logo.png" alt="">
- 
-  <!---------------- BACKGROUND ---------------->
-  <div class="dialog-bg display-none" onclick="navigateBack()"></div>
+  <main class="max-width-wrapper">
 
-  <!-------------------------- SIGN-UP AREA -------------------------->
-  <div id="sign-up-success">
-    <span id="sign-up-success_txt"> You signed up successfully </span>
-  </div>
-  <div class="grey-overlay display-none"></div>
-  <div id="sign-up-frame-wrapper">
+    <header>
+      <img id="join-logo-sign-up" src="../assets/img/log_in/join_logo.png" alt="">
+    </header>
+
+
+    <div class="dialog-bg display-none" onclick="navigateBack()"></div>
+
+
+    <div id="sign-up-success">
+      <span id="sign-up-success_txt"> You signed up successfully </span>
+    </div>
+
+    <div class="grey-overlay display-none"></div>
+
     <div id="sign-up-frame">
-      <a href="./index.html">
-      </a>
+
+      <a href="./index.html"></a>
+
+      <!--------------------------Header -------------------------->
       <header class="sign-up-header">Sign up
         <a href="../index.html">
           <img src="../assets/img/sign_up/back_arrow_blue.png" id="back-arrow-blue" alt="">
         </a>
         <img src="../assets/img/sign_up/horizontal_stroke_blue.png" class="blue-storke" alt="">
       </header>
-      <!--------------------------FORM INPUT FIELDS -------------------------->
+
+      <!--------------------------Form -------------------------->
       <form onsubmit="getSignUpInputs(); return false" class="sign-up-form">
         <div id="input-fields-frame">
+
+
+          <!--------------------------Name -------------------------->
           <div class="input-field-box">
             <input class="input-field" id="name" placeholder="Name" type="text" required autocomplete="off">
-            <img src="./assets/img/sign_up/icon_person.png" id="icon-person" class="input-field__img-placing" alt="">
+            <img src="../assets/img/sign_up/icon_person.png" id="icon-person" class="input-field__img-placing" alt="">
           </div>
+
+          <!-------------------------- Email -------------------------->
           <div class="input-field-box">
             <input class="input-field" id="mail" placeholder="Email" type="email" required autocomplete="off">
-            <img src="./assets/img/log_in/mail.png" id="icon-person" class="input-field__img-placing" alt="">
+            <img src="../assets/img/log_in/mail.png" id="icon-person" class="input-field__img-placing" alt="">
           </div>
-          <!-------------------------- PASSWORDS -------------------------->
+
+          <!-------------------------- Password -------------------------->
           <div class="input-field-box">
             <input class="input-field " id="password" placeholder="Password" type="password" required>
-            <img src="./assets/img/log_in/lock.png" id="password-img" class="input-field__img-placing" alt=""
+            <img src="../assets/img/log_in/lock.png" id="password-img" class="input-field__img-placing" alt=""
               onclick="togglePasswordVisibility(`password`, `password-img`)">
           </div>
+
+          <!-------------------------- Password Repeat -------------------------->
           <div class="input-field-box">
             <input class="input-field" id="password-repeat" placeholder="Confirm Password" type="password" required>
-            <img src="./assets/img/log_in/lock.png" id="password-repeat-img" class="input-field__img-placing" alt=""
+            <img src="../assets/img/log_in/lock.png" id="password-repeat-img" class="input-field__img-placing" alt=""
               onclick="togglePasswordVisibility(`password-repeat`, 'password-repeat-img')">
           </div>
+
+          <!-------------------------- Checkbox -------------------------->
           <div id="checkbox-frame">
             <input required="" type="checkbox" id="privacy-checkbox">
             <span id="accept"> I accept the </span>
             <a href="privacy_policy.html" id="privacy-policy">Privacy Policy</a>
           </div>
+
+          <!-------------------------- Submit Btn -------------------------->
           <button id="button-sign-up">
             <span id="sign-up-button-text">Sign up</span>
           </button>
+
         </div>
       </form>
     </div>
-  </div>
+  </main>
+
   <!--------------------------- FOOTER ------------------------------>
   <footer>
     <div class="footer-div">
@@ -77,6 +98,6 @@
       <a href="/legal_notice.html" class="footer-info">Legal notice</a>
     </div>
   </footer>
-</body>
 
+</body>
 </html>
