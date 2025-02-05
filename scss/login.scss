@@ -1,5 +1,9 @@
 @import 'mixins.scss';
 
+.test-class{
+  color:blue;
+}
+
 
 *{
   box-sizing: border-box;
@@ -59,13 +63,13 @@ header {
   cursor: pointer;
 }
 
-#checkbox-frame {
+.checkbox-frame {
   display: flex;
   align-items: center;
   padding-left: 24px;
 }
 
-
+ 
 .sign-up-mobile {
   display: none;
   width: 297px;
@@ -150,22 +154,13 @@ h1 {
   border: solid #29ABE2 1px;
 }
 
-#img-lock {
+.icon-pwd, .icon-mail{
   height: 24px;
   width: 24px;
   position: absolute;
   right: 19px;
   cursor: pointer;
 }
-
-#mail-img{
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  right: 19px;
-  cursor: pointer;
-}
-
 
 .log-in-btn {
   width: 110px;

@@ -32,25 +32,6 @@ function clearFields(name, email, password, passwordRepeat) {
 }
 
 
-/**
- * Changes the icon of the password field onclick, 
- * from visible to invisible. 
- * @param {string} passwordId - id of password element
- * @param {string} passwordImg - id of password image
- */
-function togglePasswordVisibility(passwordId, passwordImg) {
-  const passwordInput = document.getElementById(passwordId);
-  const passwordFieldIcon = document.getElementById(passwordImg);
-  if (!pwInputVisible) {
-    passwordInput.type = "text";
-    passwordFieldIcon.src = "/assets/img/log_in/visibility.png";
-    pwInputVisible = true;
-  } else {
-    passwordInput.type = "password";
-    passwordFieldIcon.src = "/assets/img/log_in/visibility_off.png";
-    pwInputVisible = false;
-  }
-}
 
 
 /**

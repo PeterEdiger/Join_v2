@@ -11,11 +11,13 @@
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
 
-  <script src="./js/login.js" type="module" defer></script>
-  <script src="./firebase.js" type="module" defer></script>
+  <!-- Modules are automatically defer. -->
+  <script src="./tools.js" type="module"></script>
+  <script src="./js/login.js" type="module"></script>
+  <script src="./firebase.js" type="module"></script>
 </head>
 
-<body onload="logInInit()">
+<body>
   <main class="max-width-wrapper">
     <header>
       <img src="../assets/img/log_in/join_logo.png" alt="logo" class="join-logo join-logo-animation">
@@ -36,18 +38,17 @@
         <!------------------------- Email ------------------------->
         <div class="email-containter">
           <input class="login-input mail-img" autocomplete="off" placeholder="Email" type="email" required id="email">
-          <img src="../assets/img/log_in/mail.png" id="img-lock">
+          <img src="../assets/img/log_in/mail.png" class="icon-mail">
         </div>
 
         <!------------------------- Password ------------------------->
         <div class="password-container">
-          <input class="login-input" placeholder="Password" type="password" required id="password">
-          <img src="../assets/img/log_in/lock.png" id="img-lock" class="img-pwd" onclick="togglePasswordVisibility()">
+          <input class="login-input password" placeholder="Password" type="password" required>
+          <img src="../assets/img/log_in/lock.png" class="icon-pwd img-pwd">
         </div>
 
-
         <!------------------------- Checkbox ------------------------->
-        <div id="checkbox-frame">
+        <div class="checkbox-frame">
           <input required="" type="checkbox" id="privacy-checkbox">
           <span id="accept"> Remember Me </span>
         </div>

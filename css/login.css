@@ -1,5 +1,9 @@
 /************************* Login Signup *************************/
 /************************* Button Styling *************************/
+.test-class {
+  color: blue;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -62,7 +66,7 @@ header {
   cursor: pointer;
 }
 
-#checkbox-frame {
+.checkbox-frame {
   display: flex;
   align-items: center;
   padding-left: 24px;
@@ -152,15 +156,7 @@ h1 {
   border: solid #29ABE2 1px;
 }
 
-#img-lock {
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  right: 19px;
-  cursor: pointer;
-}
-
-#mail-img {
+.icon-pwd, .icon-mail {
   height: 24px;
   width: 24px;
   position: absolute;
