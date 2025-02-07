@@ -20,13 +20,17 @@
 <body>
   <main class="max-width-wrapper">
     <header>
-      <img src="../assets/img/log_in/join_logo.png" alt="logo" class="join-logo join-logo-animation">
-      <div class="sign-up fading-animation">
-        <span>Not a Join user?</span>
-        <a href="../html/signup.html"><button>Sign up</button></a>
-      </div>
-    </header>
 
+      <img src="../assets/img/log_in/join_logo.png" alt="logo" class="join-logo join-logo-animation">
+
+      <div class="nav--signup-container fading-animation">
+        <span>Not a Join user?</span>
+        <a href="../html/signup.html" class="btn--signup-style">
+          Sign Up
+        </a>
+      </div>
+
+    </header>
 
     <div class="login-body fading-animation">
       <div class="login-headline">
@@ -35,23 +39,23 @@
       </div>
 
       <form onsubmit="login(); return false" class="login-area">
-        <!------------------------- Email ------------------------->
-        <div class="email-containter">
-          <input class="login-input mail-img" autocomplete="off" placeholder="Email" type="email" required id="email">
-          <img src="../assets/img/log_in/mail.png" class="icon-mail">
+
+        <div class="email-pw-container">
+          
+          <!------------------------- Email ------------------------->
+          <div class="email-containter">
+            <input class="login-input mail-img" autocomplete="off" placeholder="Email" type="email" required id="email">
+            <img src="../assets/img/log_in/mail.png" class="icon-mail">
+          </div>
+  
+          <!------------------------- Password ------------------------->
+          <div class="password-container">
+            <input class="login-input password" placeholder="Password" type="password" required>
+            <img src="../assets/img/log_in/lock.png" class="icon-pwd img-pwd">
+          </div>
+
         </div>
 
-        <!------------------------- Password ------------------------->
-        <div class="password-container">
-          <input class="login-input password" placeholder="Password" type="password" required>
-          <img src="../assets/img/log_in/lock.png" class="icon-pwd img-pwd">
-        </div>
-
-        <!------------------------- Checkbox ------------------------->
-        <div class="checkbox-frame">
-          <input required="" type="checkbox" id="privacy-checkbox">
-          <span id="accept"> Remember Me </span>
-        </div>
 
         <!------------------------- Btns ------------------------->
         <div class="login-buttons">
@@ -62,13 +66,14 @@
       </form>
     </div>
 
+
     <div class="sign-up-mobile">
       <span>Not a Join user?</span>
       <a href="./html/signup.html"><button>Sign up</button></a>
     </div>
 
-
   </main>
+
 
   <footer class="fading-animation">
     <div class="footer-div">

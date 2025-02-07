@@ -4,6 +4,7 @@ let pwInputVisible = false
 /**
  * Changes the icon of the password field onclick, 
  * from visible to invisible. 
+ * Cl stands for class
  * @param {string} passwordId - id of password element
  * @param {string} passwordImg - id of password image
  */

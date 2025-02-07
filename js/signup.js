@@ -5,7 +5,16 @@ import {
   onAuthStateChanged,
   signOut,
 } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+import { togglePasswordVisibility } from "../tools.js";
 
+
+
+// ------------------------- Dom References -------------------------
+const imgPwLock = document.querySelector(`.img--pw-lock`)
+
+
+// ------------------------- Event Listeners -------------------------
+imgPwLock.addEventListener("click", () => {togglePasswordVisibility('password', 'img--pw-lock')} )
 
 /**
  * Takes a string and takes and isolates the first letters. 
@@ -81,13 +90,4 @@ function pwCheck() {
 }
 
 
-/**
- * Listener for changes in the password fields. 
- */
-pwInput.addEventListener("input", () => {
-  pwCheck();
-});
-pwInputRepeat.addEventListener("input", () => {
-  pwCheck();
-});
 

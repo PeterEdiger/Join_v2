@@ -9,9 +9,9 @@
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
 
 
-  <script src="./tools.js" type="module" defer></script>
+  <script src="../tools.js" type="module" defer></script>
   <script src="../firebase.js" type="module" defer></script>
-  <script src="../js/signup.js" defer></script>
+  <script src="../js/signup.js" type="module"></script>
   <title>Join | Sign Up</title>
 </head>
 
@@ -23,7 +23,7 @@
     </header>
 
 
-    <div class="dialog-bg display-none" onclick="navigateBack()"></div>
+    <!-- <div class="dialog-bg display-none" onclick="navigateBack()"></div> -->
 
 
     <div id="sign-up-success">
@@ -63,9 +63,8 @@
 
           <!-------------------------- Password -------------------------->
           <div class="input-field-box">
-            <input class="input-field " id="password" placeholder="Password" type="password" required>
-            <img src="../assets/img/log_in/lock.png" id="password-img" class="input-field__img-placing" alt=""
-              onclick="togglePasswordVisibility(`password`, `password-img`)">
+            <input class="input-field password" placeholder="Password" type="password" required>
+            <img src="../assets/img/log_in/lock.png"  class="img--pw-lock input-field__img-placing" alt="">
           </div>
 
           <!-------------------------- Checkbox -------------------------->

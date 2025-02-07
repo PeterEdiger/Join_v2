@@ -167,6 +167,10 @@ header {
   border: solid #29ABE2 1px;
 }
 
+.img--pw-lock {
+  cursor: pointer;
+}
+
 /************************* CHECKBOX *************************/
 #checkbox-frame {
   display: flex;

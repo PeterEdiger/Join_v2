@@ -18,9 +18,10 @@ document.addEventListener('DOMContentLoaded', logInInit);
 // Replaces body onload
 
 
-// ------------------------- DOM REFERENCES -------------------------
+// ------------------------- Dom References -------------------------
 const pwdInputEl = document.querySelector(`.icon-pwd`)
-const BtnGuestLoginEl = document.querySelector(`.btn-guest-login`)
+const btnGuestLoginEl = document.querySelector(`.btn--guest-login`)
+
 
 const guestLogIn =  ()=> {
   console.log("Guest log in button rocks");
@@ -29,7 +30,7 @@ const guestLogIn =  ()=> {
 
 // ------------------------- Event Listeners -------------------------
 pwdInputEl.addEventListener("click",()=> togglePasswordVisibility("password", "icon-pwd"))
-BtnGuestLoginEl.addEventListener("click", guestLogIn)
+btnGuestLoginEl.addEventListener("click", guestLogIn)
 
 
 
