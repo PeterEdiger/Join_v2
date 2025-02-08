@@ -1,9 +1,7 @@
 @import 'mixins.scss';
 
-.test-class{
-  color:blue;
-}
 
+/************************* Global Classes *************************/
 *{
   box-sizing: border-box;
 }
@@ -11,8 +9,8 @@
 html,
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
   height: 100%;
+  font-family: "Inter", sans-serif;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -22,36 +20,32 @@ body {
   background-color: #f6f7f8;
 }
 
+/************************* Header *************************/
 header {
   width: 100%;
   height: 20px;
-  display: flex;
-  justify-content: space-between;
+  @include dflex($aI: auto);
 }
 
-.join-logo {
+.img--join-logo {
   margin: 24px;
   width: 100.03px;
   height: 121.97px;
 }
 
 .nav--signup-container {
-  display: flex;
-  width: 297px;
-  gap: 35px;
-  align-items: baseline;
+  @include dflex($jC: space-around, $aI: baseline, $gap: 35px);
   position: relative;
+  width: 297px;
   top: 50px;
 }
 
 .btn--signup-style{
-  height: 49px;
-  width: 91px;
-  text-decoration: none;
+  @include width-height-padding($w: 91px, $h: 49px, $p: 15px);
   font-size: 16px;
   font-weight: 700;
+  text-decoration: none;
   border-radius: 8px;
-  padding: 15px;
   background-color: rgb(43, 54, 71);
   color: white;
   border: none;
@@ -63,11 +57,6 @@ header {
   cursor: pointer;
 }
 
-.checkbox-frame {
-  display: flex;
-  align-items: center;
-  padding-left: 24px;
-}
 
  
 .sign-up-mobile {
@@ -132,9 +121,8 @@ h1 {
 }
 
 .login-area {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  border: solid orange; 
+  @include dflex($fD: column, $gap: 40px);
   width: 100%;
 }
 
