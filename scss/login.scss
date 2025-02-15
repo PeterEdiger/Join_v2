@@ -23,12 +23,14 @@ body {
 
 /************************* Header *************************/
 header {
+  // @include widthHeight($w: 100%, $h: 20px);
   @include width-height($w: 100%, $h: 20px);
   @include dflex($aI: auto);
   border: solid orange;
 }
 
 .img--join-logo {
+  // @include widthHeightMargin($w: 100px, $h: 122px, $m: 24px);
   @include width-height-margin($w: 100px, $h: 122px, $m: 24px)
 }
 
@@ -41,6 +43,7 @@ header {
 
 .btn--signup-style {
   @include width-height-padding($w: 91px, $h: 49px, $p: 15px);
+  // @include widthHeightPadding($w: 91px, $h: 49px, $p: 15px);
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
