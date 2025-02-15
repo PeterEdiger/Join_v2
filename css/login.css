@@ -44,7 +44,7 @@ header {
   margin: 24px;
 }
 
-.nav--signup-container {
+.container--signup {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -101,7 +101,7 @@ header {
 }
 
 /* LogIn Section */
-.login-body {
+.card--login {
   margin: auto;
   display: flex;
   padding: 48px 115px;
@@ -285,7 +285,7 @@ footer a:hover {
 
 /************************* RESPONSIVNESS *************************/
 @media (max-width: 750px) {
-  .login-body {
+  .card--login {
     margin-top: 150px;
     padding: 32px 16px;
     width: 90%;
@@ -359,7 +359,7 @@ footer a:hover {
   }
 }
 @media (max-width: 580px) {
-  .login-body {
+  .card--login {
     width: 85%;
   }
   body {
