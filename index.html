@@ -32,24 +32,25 @@
       </div>
 
     </header>
-
+    
+    <!------------------------- card--login  ------------------------->
     <div class="card--login fading-animation">
-    <!-- <div class="login-body fading-animation"> -->
-      <div class="login-headline">
-        <h1>Log in</h1>
+      <div class="headline--login">
+        <h1 class="txt">Log in</h1>
         <img src="../assets/img/log_in/blue_line.png" class="vector-line" alt="vector line">
       </div>
-
-      <form onsubmit="login(); return false" class="login-area">
+      
+      <!------------------------- form--login  ------------------------->
+      <form onsubmit="login(); return false" class="form--login">
 
         <div class="email-pw-container">
-          
+
           <!------------------------- Email ------------------------->
           <div class="email-containter">
             <input class="login-input mail-img" autocomplete="off" placeholder="Email" type="email" required id="email">
             <img src="../assets/img/log_in/mail.png" class="icon-mail">
           </div>
-  
+
           <!------------------------- Password ------------------------->
           <div class="password-container">
             <input class="login-input password" placeholder="Password" type="password" required>
