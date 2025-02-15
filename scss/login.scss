@@ -23,15 +23,13 @@ body {
 
 /************************* Header *************************/
 header {
-  // @include widthHeight($w: 100%, $h: 20px);
-  @include width-height($w: 100%, $h: 20px);
+  @include widthHeight($w: 100%, $h: 20px);
   @include dflex($aI: auto);
   border: solid orange;
 }
 
 .img--join-logo {
-  // @include widthHeightMargin($w: 100px, $h: 122px, $m: 24px);
-  @include width-height-margin($w: 100px, $h: 122px, $m: 24px)
+  @include widthHeightMargin($w: 100px, $h: 122px, $m: 24px);
 }
 
 .nav--signup-container {
@@ -42,8 +40,8 @@ header {
 }
 
 .btn--signup-style {
-  @include width-height-padding($w: 91px, $h: 49px, $p: 15px);
-  // @include widthHeightPadding($w: 91px, $h: 49px, $p: 15px);
+  // @include width-height-padding($w: 91px, $h: 49px, $p: 15px);
+  @include widthHeightPadding($w: 91px, $h: 49px, $p: 15px);
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
@@ -64,8 +62,6 @@ header {
   width: 297px;
   gap: 35px;
   align-items: baseline;
-  // position: relative;
-  // top: 50px;
 }
 
 .sign-up-mobile button {
@@ -267,7 +263,6 @@ footer a:hover {
     margin-top: 150px;
     padding: 32px 16px;
     width: 90%;
-    // margin-top: 64px;
   }
 
   .login-buttons {

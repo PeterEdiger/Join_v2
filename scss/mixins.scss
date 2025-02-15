@@ -1,5 +1,8 @@
+// This is a stdandard mixin files which can be used in all projects. 
+// The Snippets in VS-Code are build based on this snippets.
+
 @mixin dflex($fD: row, $jC: space-between, $aI: center, $gap: 0px) {
-  display: flex;
+  display: flex; 
   flex-direction: $fD;
   justify-content: $jC;
   align-items: $aI;
@@ -10,34 +13,30 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
 }
 
-@mixin placeAbsoluteElement($top : null, $right: null, $bottom: null, $left: null) {
+@mixin placeAbsoluteElement($top : null, $right: null, $bottom: null, $left: null){
   position: absolute;
   top: $top;
   right: $right;
   bottom: $bottom;
-  left: $left;
+  left: $left;    
 }
 
 /************************* Login Signup *************************/
-
-@mixin loginSignupWindow($width, $padding) {
+@mixin loginSignupWindow($width, $padding){
   padding: $padding;
   box-sizing: border-box;
-  @include centerAbsoluteElement();
   box-shadow: 0px 2px 10px 0px #00000014;
   width: $width;
-  aspect-ratio: 1 / 1.3;
   background-color: white;
   border-radius: 30px
 }
 
 
 /************************* Button Styling *************************/
-
-@mixin removeBtnStyles() {
+@mixin removeBtnStyles(){
   background: none;
   border: none;
   padding: 0;
@@ -48,51 +47,60 @@
   outline: none;
 }
 
-@mixin roundBtn($width, $height, $b-radius, $bg-color, $color, $font-size, $font-weight) {
-  width: $width;
-  height: $height;
+@mixin roundBtn($w:null, $h:null, $b-radius:null, $bg-color:null) {
+  width: $w;
+  height: $h;
   border-radius: $b-radius;
   background-color: $bg-color;
-  color: $color;
-  font-size: $font-size;
-  font-weight: $font-weight;
 }
 
-@mixin noStylingLinks () {
-  text-decoration: none;
-  outline: none;
-  stroke: none;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:link,
-  &:visited {
-    text-decoration: none;
-  }
-}
 
 /************************* Sizing *************************/
-@mixin width-height($w, $h) {
-  width: $w;
-  height: $h;
+@mixin widthHeight($w: null, $h: null) {
+width: $w;
+height: $h;
 }
 
-@mixin width-height-padding($w, $h, $p) {
-  width: $w;
-  height: $h;
-  padding: $p
+@mixin widthHeightPadding($w: null, $h: null, $p: null) {
+width: $w;
+height: $h;
+padding: $p;
 }
 
-@mixin width-height-margin($w, $h, $m) {
-  width: $w;
-  height: $h;
-  margin: $m;
+@mixin widthHeightMargin($w: null, $h: null, $m: null) {
+width: $w;
+height: $h;
+margin: $m;
 }
 
 /************************* Fonts *************************/
-@mixin font--size-weight($s, $w){
-  font-size: $s;
-  font-weight: $w;
+@mixin fontSizeWeight($s: null, $w: null) {
+font-size: $s;
+font-weight: $w;
 }
+
+@mixin fontSizeWeightColor($s: null, $w: null, $c: null) {
+font-size: $s;
+font-weight: $w;
+color: $c;
+}
+
+
+/************************* Nav Links *************************/
+@mixin noStylingLinks () {
+text-decoration: none;
+outline: none;
+stroke: none;
+
+&:focus {
+  outline: 0;
+}
+
+&:link,
+&:visited {
+  text-decoration: none;
+}
+}
+
+
+
