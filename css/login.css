@@ -34,12 +34,13 @@ header {
   justify-content: space-between;
   align-items: auto;
   gap: 0px;
+  border: solid orange;
 }
 
 .img--join-logo {
+  width: 100px;
+  height: 122px;
   margin: 24px;
-  width: 100.03px;
-  height: 121.97px;
 }
 
 .nav--signup-container {
@@ -48,7 +49,7 @@ header {
   justify-content: space-around;
   align-items: baseline;
   gap: 35px;
-  position: relative;
+  padding: 24px 24px 0 0;
   width: 297px;
   top: 50px;
 }
@@ -157,7 +158,8 @@ h1 {
   border: solid #29ABE2 1px;
 }
 
-.icon-pwd, .icon-mail {
+.icon-pwd,
+.icon-mail {
   height: 24px;
   width: 24px;
   position: absolute;
